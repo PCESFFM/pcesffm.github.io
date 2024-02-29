@@ -1,112 +1,104 @@
 <html>
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<meta name="viewport" content="wifth+device-width, initial-scale+1.0">
-	<title> Pupil's committee website </title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:black|Roboto:light&display=swap">
 	<link rel="stylesheet" href="css.css">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;900&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,800;0,900;1,200;1,300;1,800&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-	</head>
-	<body>
-		<header>
 
-		<nav class="navbar-expand-md collapse navbar-collapse">
-			<div class="text-box">
-			<a href="#title"><h1 >PUPIL'S COMMITTEE</h1>
-			</a></div>
-		
-		<div class="right">
-			<ul>
-				<li>
-					<a href="contact.html">Contact us</a>
-				</li>
-				<li>
-					<a class="active" href="newsroom.html">Newsroom</a>
-				</li>
-				<li>
-					<a href="documents.htm">Documents</a>
-				</li>
-				<li>
-					<a href="about.html">About us</a>
-				</li>
-				<li>
-					<a href="index.html">Home</a>
-				</li>
-			</ul>
-		</nav>
+	<script type="text/javascript" src="nav-links.js"></script>
+
+	<title>Pupils' Committee Website</title>
+</head>
+
+<body>
+<header>
+	<div class="text-box"> <!--must move this outside of nav-->
+		<a href="index.html"><h1>PUPIL'S COMMITTEE</h1></a>
 	</div>
-		<body>
-
-			  <section class="our-blogs">
-			  	
-			  	<div class="containerblog">
-			  	<div class="blog-header">
-			  		<h1 style="color:#efcc90; font-weight:900;"class="bold";> Newsroom</h1>
-			  		<h3>subtext</h3>
-			  		<p> lorem ipsum adij doaiw id jeaid aijda odijdia do di adie jdaod idj aei jddjaie jdaojd aij deja d</p>
+	<nav>
+		<i class="uil uil-bars navOpenBtn"></i>			      
+		<ul class="nav-links">
+			<i class="uil uil-times navCloseBtn"></i>
+			<li>
+				<a href="contact.html">Contact us</a>
+			</li>
+			<li>
+				<a href="newsroom.html">Newsroom</a>
+			</li>
+			<li>
+				<a href="documents.html">Documents</a>
+			</li>
+			<li>
+				<a href="about.html">About us</a>
+			</li>
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+<main class="our-blogs">
+	<div class="containerblog">
+	  	<div class="blog-header">
+			<hgroup>
+	  			<h1 style="color:#efcc90; font-weight:900;"class="bold";> Newsroom</h1>
+	  			<p> lorem ipsum adij doaiw id jeaid aijda odijdia do di adie jdaod idj aei jddjaie jdaojd aij deja d</p>
+			</hgroup>
+	  	</div>
+		<div class="blogs">
+			<div class="blog">
+			  	<div class="blog-top">
+			  		<img class="imgblog"src="images/blog.png">
+			  		<span class="blog-category">Merch</span>
 			  	</div>
-			  	<div class="blogs">
-			  		<div class="blog">
-			  			<div class="blog-top">
-			  				<img class="imgblog"src="images/blog.png">
-			  				<span class="blog-category">Merch</span>
-			  			</div>
-			  			<div class="blog-about">
-			  				<span> </span>
-			  					<span> May 6, 2023</span>
-			  					</div>
-			  					<a href="blog/1entry.html">
-			  							<h4> cairnrfoa </h4>
-			  					</a>
-			  					<p class="blog-text"> filler filler filler filler filler filelr filelr iflielr ifller filler ilfliir filler filreri filrer fillre </p>
-			  					<a href="blog/1entry.html" class="read-more"> Read more </a>
-			  				</div>
+			  	<div class="blog-about">
+			  		<span> May 6, 2023</span>
+			  	</div>
+			  	<a href="blog/1entry.html">
+			  		<h4> cairnrfoa </h4>
+			  	</a>
+			  	<p class="blog-text"> filler filler filler filler filler filelr filelr iflielr ifller filler ilfliir filler filreri filrer fillre </p>
+			  	<a href="blog/1entry.html" class="read-more"> Read more </a>
+			</div>
 
-	
-			  		<div class="blog">
-			  			<div class="blog-top">
-			  				<img class="imgblog" src="images/blog.png">
-			  				<span class="blog-category">Merch</span>
-			  			</div>
-			  			<div class="blog-about">
-			  				<span> filler filer</span>
-			  					<span> May 6, 2023</span>
-			  					</div>
-			  					<a href="#">
-			  							<h4> cairnrfoa </h4>
-			  					</a>
-			  					<p class="blog-text"> filler filler filler filler filler filelr filelr iflielr ifller filler ilfliir filler filreri filrer fillre </p>
-			  					<a href="#" class="read-more"> Read more </a>
-			  				</div>
-			  				
-			  		<div class="blog">
-			  			<div class="blog-top">
-			  				<img class="imgblog" src="images/blog.png">
-			  				<span class="blog-category">Merch</span>
-			  			</div>
-			  			<div class="blog-about">
-			  				<span> filler filer</span>
-			  					<span> May 6, 2023</span>
-			  					</div>
-			  					<a href="#">
-			  							<h4> cairnrfoa </h4>
-			  					</a>
-			  					<p class="blog-text"> filler filler filler filler filler filelr filelr iflielr ifller filler ilfliir filler filreri filrer fillre </p>
-			  					<a href="#" class="read-more"> Read more </a>
-			  				</div>
-</div>
-</div>
-</section>
-</body>
+			<div class="blog">
+				<div class="blog-top">
+			  		<img class="imgblog" src="images/blog.png">
+			  		<span class="blog-category">Merch</span>
+				</div>
+			  	<div class="blog-about">
+			  		<span> May 6, 2023</span>
+			  	</div>
+			  	<a href="#">
+			  		<h4> cairnrfoa </h4>
+			  	</a>
+			  	<p class="blog-text"> filler filler filler filler filler filelr filelr iflielr ifller filler ilfliir filler filreri filrer fillre </p>
+			  	<a href="#" class="read-more"> Read more </a>
+			</div>
+
+			<div class="blog">
+				<div class="blog-top">
+			  		<img class="imgblog" src="images/blog.png">
+			  		<span class="blog-category">Merch</span>
+			  	</div>
+			  	<div class="blog-about">
+			  		<span> May 6, 2023</span>
+			  	</div>
+			  	<a href="#">
+			  		<h4> cairnrfoa </h4>
+			  	</a>
+			  	<p class="blog-text"> filler filler filler filler filler filelr filelr iflielr ifller filler ilfliir filler filreri filrer fillre </p>
+			  	<a href="#" class="read-more"> Read more </a>
+			</div>
+		</div>
+	</div>
+</main>
 <footer>
-	 <p>@Copyright 2023 Pupil's Commmittee<br>
-	</p>
-</ul>
-	</body>
-	</html>
-
-
+	<p>@Copyright 2023 Pupil's Commmittee</p>
+</footer>
+</body>
+</html>

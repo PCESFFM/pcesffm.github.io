@@ -4,7 +4,7 @@ heres what u do:
 it something new.
 2. replace placeholder text with whatever
 you want
-3. go into the newroom.html and copy paste
+3. go into the newsroom.html and copy paste
 the div "blog", put it before all others
 4. replace all text and also dont forget 
 to change href to whatever you've named
