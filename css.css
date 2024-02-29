@@ -3,7 +3,7 @@
 *::after {
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto", Georgia, sans-serif; /*Will remove georgia only used for testing because it is obviously wrong*/
+	font-family: "Roboto", Tahoma, sans-serif;
 	font-weight: 300;
 	box-sizing: border-box;
 }
@@ -128,32 +128,31 @@ hr.solid {
 }
 
 header {
+	position: fixed;
+	top: 0;
 	width: 100%;
-	height: 100vh;
-	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/background.jpg);
-	background-position: center center;
-	background-size:cover;
-	z-index:4;
-}
-.text-box {
-	color:#fff;
-	position:absolute;
-}
-.text-box h1 {
-	margin-left:-10px;
-	margin-top: -10px;
+	padding: 15px;
 
+	font-family: "Poppins", Tahoma, sans-serif;
+
+	background-color: rgba(0,0,0,0.6);
+	backdrop-filter: blur(2px);
+	box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+	border-bottom: 2px solid rgb(255, 255, 255, .2);
+}
+header h1 {
+	position: fixed;
 	color: transparent;
 	-webkit-text-stroke: 1px #fff;
-	font-family: "Poppins", Tahoma, sans-serif;
+	text-transform: uppercase;
+
 	font-weight: 900;
-	font-size:30px;
-	letter-spacing:3px;
-	text-transform: capitalize;
+	font-size: 30px;
+	letter-spacing: 3px;
+	z-index: 1;
 
 	background-image: url(images/header.bkg-effect.png);
 	background-clip: text;
-	background-position: 0 0;
 	animation: back 30s linear infinite;
 }
 @keyframes back{
@@ -161,55 +160,67 @@ header {
 		background-position: 1920px 0; /*Must travel the size of the actual image*/
 	}
 }
-nav {
-	width: 100%;
-	position: top;
-	font-family: "Poppins", Tahoma, sans-serif;
-	justify-content: space-between;
-	align-items:center;
-	background-color: rgba(0,0,0,0.6);
-	position:fixed;
-	z-index: 1;
-	top: 0;
-	padding: 25px 35px;
-	backdrop-filter: blur(2px);
-	box-shadow: 0 20px 30px rgba(0,0,0,0.15);
-	border-bottom: 2px solid rgb(255, 255, 255, .2);
+header nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
-nav a {
-	color:#fff;
-	text-decoration:none;
-	letter-spacing:1px;
+header nav a {
+	display: block;
+	margin: 0 4px;
+
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 1px;
 	padding: 5px 20px;
 	transition: 0.5s ease;
 }
-nav a:hover {
+header nav a:hover {
 	background-color: #fff;
 	color: #000;
 }
-nav a.current-link {
-	background-color:#fff;
+header nav a.current-link {
+	background-color: #fff;
 	color: #000;
 	transition: none;
 }
-nav ul {
-	float: right;
-	list-style: none;
-	list-style-type: none;
-	margin-top: -2px;
-	margin-right: 20px;
+@media screen and (max-width: 950px) {
+	header h1 {
+		margin-top:-10px;
+	}
 }
-nav ul li {
-	position: relative;
-	display: block;
-	float: right;
-	margin: 4px;
+@media (max-width : 880px) {
+	header h1 {
+		margin-left:150px;
+	}
+	
+	nav {
+		line-height:20px;
+    }
+}
+@media screen and (max-width: 768px) {
+	nav .openNav .nav-links {
+		left: 0;
+	}
+	.navOpenBtn {
+		color: #fff;
+		font-size: 20px;
+		cursor: pointer;
+		z-index:1;
+	}
+}
+
+.welcome {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/background.jpg);
+	background-position: center center;
+	background-size:cover;
 }
 
 .firsttittle{
-	margin-top:-100px;
 	position: center;
-  	text-align:center;
+  	text-align: center;
 }
 .firsttext{
 	font-size:1.3vw;
@@ -350,25 +361,25 @@ nav ul li {
 	text-align: center;
 	margin-top: 1rem;
 }
-.team-content img{
+.team-content img {
 	width: 100%;
 	height: auto;
 	border-radius: 15px;
 	margin-bottom: 15px;
 }
-.center h1{
+.center h1 {
 	color: #fff;
 	font-size: 4rem;
 	text-align: center;
 }
-.box{
+.box {
 	padding: 16px;
 	background: #1b1229;
 	border-radius: 15px;
 	transition: all .38s ease;
 }
 
-.boxsecond{
+.boxsecond {
 	width:18%;
 	padding: 16px;
 	background: #1b1229;
@@ -398,7 +409,7 @@ nav ul li {
 .icons ion-icon:hover {
 	transform: scale(1.2);
 }
-.box:hover, .boxsecond:hover{
+.box:hover, .boxsecond:hover {
 	transform: translateY(-10px);
 	cursor: pointer;
 }
@@ -593,16 +604,16 @@ textarea {
   }
 }
 @media screen and (max-width: 1240px) {
-  h1 {
-    font-size: 26px;
-  }
-.firsttittle{
-	margin-left:-30px;
-	font-size:46px;
-}
-  .underline {
-    width: 68px;
-  }
+	h1 {
+		font-size: 26px;
+	}
+	.firsttittle {
+		margin-left:-30px;
+		font-size:46px;
+	}
+	.underline {
+		width: 68px;
+	}
   
   #form_button {
     padding: 15px 25px;
@@ -789,55 +800,6 @@ textarea {
 	transform: scale(1.02);
 	box-shadow: 3px 3px 9px #000000;
 }
-
-@media (max-width : 880px) {
-	.text-box {
-		margin-left:150px;
-	}
-	
-	nav {
-		line-height:20px;
-    }
-}
-
-nav {
-	justify-content: space-between;
-}
-a {
-  color: #fff;
-  text-decoration: none;
-}
-nav .logo {
-  font-size: 22px;
-  font-weight: 500;
-}
-
-
-
-nav .navOpenBtn,
-nav .navCloseBtn {
-	display: none;
-}
-
-
-@media screen and (max-width: 950px) {
-  .text-box {
-  	margin-top:-10px;
-  }
- 
-}
-@media screen and (max-width: 768px) {
-	nav .openNav .nav-links {
-		left: 0;
-	}
-	.navOpenBtn {
-		color: #fff;
-		font-size: 20px;
-		cursor: pointer;
-		z-index:1;
-	}
-}
-
 
 #contactme {
 	background-color: black;
