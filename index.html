@@ -7,7 +7,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-	<link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" href="base-style.css">
+	<link rel="stylesheet" href="main-page-style.css">
 
 	<script type="text/javascript" src="nav-links.js"></script>
 
@@ -16,7 +17,7 @@
 
 <body>
 <header>
-	<a href="index.html"><h1>Pupils' Committee</h1></a>
+	<h1><a href="index.html">Pupils' Committee</a></h1>
 	<nav>
 		<a href="index.html">Home</a>
 		<a href="about.html">About us</a>
@@ -26,48 +27,43 @@
 	</nav>
 </header>
 <main>
-	<section class="welcome">
-		<h1 style="color: #ffffff;" class="bold firsttittle">WELCOME </h1>
-		<div class="firsttext">
-			<h3 style=" color:white;">Textenim lobortis scelerisque fermentum dui faucibus Textenim lobortis scelerisque fermentum dui faucibus Textenim lobortis scelerisque fermentum dui faucibus</h3>
-			<h3 style=" color:grey;">Textenim lobortis scelerisque fermentum dui faucibus Textenim lobortis scelerisque fermentum dui faucibus Textenim lobortis scelerisque fermentum dui faucibus </h3>
-			<a class="main-button" href="newsroom.html" style="--clr:#FFFFFF">
-				Newsroom
-			</a>
-		</div>
+	<section id="welcome-info">
+		<hgroup>
+			<h2>WELCOME</h2>
+			<p style=" color:white;">This is the official European School Frankfurt Pupils' Committee Website!</p>
+		</hgroup>
+		<p style=" color:grey;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit ex vitae velit pretium condimentum. In sit amet nibh ac neque fermentum auctor sed eget lectus.</p>
+		<button class="big-button" type="button" onclick="location.href='newsroom.html'">Newsroom</a>
 	</section>
-	
-	<div class="secondbackground">
-		<h1 style="text-align: center;  font-weight:900; color: #ffffff;" class="bold">
-			Committees
-		</h1>
+
+	<div class="buffer"></div>
+
+	<section id="committees-info">
+		<h2 class="page-heading">Committees</h2>
 		<h2 style="text-align: center; color: gray; font-size:1.4vw; padding: 50px;">
 			The Pupil's committee is divided into filler filller filler fillerf aihfdoias hfhdhahd explain here all the stuf filler
 		</h2>
-		<div class="container">
+		<div class="committee-redirects">
 			<div class="committee-box">
 				<img class="icon" src="images/leaf.png" style="width:113px; height:auto;">
 		 		<h2 style= "font-weight:900;"> Green committee</h2>
 		 		<p>et, consectetur adipiscing elit. consectetur turpis, in blandit dolor. Vivamus eget erat magna. Suspendisse lectus nulla, phamagna neque, Morbi</p>
 			</div>
 		 	<div class="committee-box">
-		 		<br>
 		 		<img class="icon" src="images/party.png" style="width:113px; height:auto;">
 		 		<h2>Events committee</h2>
-		 		<p> et, consectetur adipiscing elit. consectetur turpis, in blandit dolor. Vivamus eget erat magna. Suspendisse lectus nulla, pharetra co Morbi </p>
+		 		<p>et, consectetur adipiscing elit. consectetur turpis, in blandit dolor. Vivamus eget erat magna. Suspendisse lectus nulla, pharetra co Morbi</p>
 			</div>
 			<div class="committee-box">
 		 		<img class="icon" src="images/media.png" style="width:113px; height:auto;">
 		 		<h2>Media committee</h2>
-		 		<p>et, consectetur adipiscing elit. consectetur turpis, in blandit dolor. Vivamus eget erat magna. Suspendisse lectus nulla, phareneque, Morbi </p>
+		 		<p>et, consectetur adipiscing elit. consectetur turpis, in blandit dolor. Vivamus eget erat magna. Suspendisse lectus nulla, phareneque, Morbi</p>
 			</div>
 		</div>
 		<div style= "text-align: center;">
-			<a class="main-button" href="about.html" style="--clr:#FFFFFF;">
-				Meet the team<i></i>
-			</a>
+			<button class="big-button" type="button" onclick="location.href='about.html'">Meet the team</button>
 		</div>
-	</div>
+	</section>
 </main>
 <footer>
 	<p>@Copyright 2023 Pupil's Commmittee</p>

@@ -1,0 +1,133 @@
+#welcome-info {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	min-height: 100vh;
+
+	padding-top: 125px;
+
+	color: white;
+
+	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+
+	& h2 {
+		font-family: "Poppins", Tahoma, sans-serif;
+		font-weight: 900;
+		font-size: 36px;
+		text-align: center;
+	}
+	& p {
+		font-size: 1.3vw;
+		text-align: center;
+		max-width: 50vw;
+	}
+}
+@media screen and (max-width: 1080px) {
+	#welcome-info {
+		padding-top: 160px;
+	}
+}
+
+.buffer {
+	width: 100vw;
+	min-height: 60vh;
+	background-color: #27282c;
+}
+
+#committees-info {
+	width: 100vw;
+	min-height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(images/background2.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+}
+.committee-redirects {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	align-items:center;
+}
+.committee-box {
+	width:300px;
+	height:320px;
+	background: radial-gradient(circle at top left,transparent 340px, rgba(255,255,255,.3)),
+				radial-gradient(circle at bottom right,transparent 310px, rgba(255,255,255,.3));
+	margin: 15px;
+	padding: 5px;
+	color: white;
+	text-align:center;
+	transition: 0.3s ease-in-out;
+}
+.committee-box:hover {
+	background-color: rgba(108, 122, 137, 0.2);
+}
+.committee-box p {
+	line-height: 1.6;
+	padding: 0 10px;
+}
+.icon {
+	display: block;
+	height: 50px;
+	width: 50px;
+	fill: #474544;
+}
+.big-button {
+	position: relative;
+	padding: 10px 30px;
+
+	background: #000;
+	border: 2px solid #fff;
+
+	color: white;
+	font-family: "Poppins", Tahoma, sans-serif;
+	font-weight: 900;
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	transition: 0.5s;
+
+	&::before, &::after {
+		content:'';
+		position: absolute;
+
+		width:10px;
+		height:4px;
+
+		background: #27282c;
+		transform: translateX(-50%) skewX(325deg);
+		transition: 0.5s;
+	}
+	&::before {
+		top: -2px;
+		right: 20%;
+	}
+	&::after {
+		bottom: -2px;
+		left: 20%;
+	}
+	&:hover {
+		letter-spacing: 0.15em;
+		border-color: white;
+		box-shadow: 0 0 10px white;
+		&::before {
+			width: 20px;
+			right: 80%;
+		}
+		&::after {
+			width: 20px;
+			left: 80%;
+		}
+	}
+}

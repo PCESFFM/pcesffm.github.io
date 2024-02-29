@@ -1,0 +1,53 @@
+.doc-box{
+	padding: 25px;
+	background: #1b1229;
+	border-radius: 15px;
+	height: 300px;
+	width: 95%;
+
+}
+.docs {
+	width: 100%;
+	background: #301934;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+    min-height: 100%;
+	padding: 0px;
+}
+
+.doc-icons{
+	color: #fff;
+	font-size: 180px;
+	margin: auto;
+}
+
+.doc-iconbox{
+	background: #3a3242;
+	width: 250px;
+	height: 250px;
+	border-radius: 15px;
+	padding: 35px;
+	float: left;
+}
+
+.doc-textbox{
+	float: left;
+	height: 250px;
+	width: 61.75%;
+	margin-left: 25px;
+}
+
+.doc-name{
+	font-size: 35px;
+	color: #b7b4bb;
+	font-family: "Poppins", Tahoma, sans-serif;
+	font-weight:900;
+	letter-spacing: 2px;
+}
+
+.doc-text{
+	font-size: 20px;
+	color: #b7b4bb;
+}
