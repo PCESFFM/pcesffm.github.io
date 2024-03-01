@@ -9,29 +9,37 @@
 
 	padding-top: 125px;
 
-	color: white;
-
 	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/background.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
+}
+hgroup.section-heading {
+	text-align: center;
+	max-width: 50vw;
+	color: white;
 
 	& h2 {
 		font-family: "Poppins", Tahoma, sans-serif;
 		font-weight: 900;
-		font-size: 36px;
-		text-align: center;
+		font-size: 48px;
 	}
 	& p {
-		font-size: 1.3vw;
-		text-align: center;
-		max-width: 50vw;
+		font-size: 28px;
+	}
+	& p:last-child {
+		color:grey;
 	}
 }
 @media screen and (max-width: 1080px) {
 	#welcome-info {
 		padding-top: 160px;
+	}
+}
+@media screen and (max-width: 800px) {
+	hgroup.section-heading {
+		max-width: 80vw;
 	}
 }
 
