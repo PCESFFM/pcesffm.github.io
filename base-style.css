@@ -38,7 +38,7 @@ header {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	align-items: center;
+	align-items: stretch;
 
 	position: fixed;
 	top: 0;
@@ -77,12 +77,12 @@ header nav {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 	align-content: center;
+	gap: 5px;
 }
 header nav a {
 	display: block;
-	margin: 0 4px;
 
 	color: #fff;
 	text-decoration: none;
