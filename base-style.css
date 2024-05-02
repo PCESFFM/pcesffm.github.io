@@ -36,6 +36,7 @@ header {
    align-items: center;
 
    position: fixed;
+   z-index: 1;
    top: 0;
    width: 100%;
    padding: 4px 24px;
@@ -131,7 +132,6 @@ header nav a.current-link {
       height: 100px;
    }
 }
-
 @media all and (max-width: 720px) {
    header nav {
       display: none;
