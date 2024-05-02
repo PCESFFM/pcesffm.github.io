@@ -34,6 +34,11 @@
       padding-top: 160px;
    }
 }
+@media screen and (max-width: 800px) {
+	hgroup.section-heading {
+		max-width: 80vw;
+	}
+}
 
 .buffer {
    width: 100vw;
