@@ -29,28 +29,22 @@
       max-width: 50vw;
    }
 }
-@media screen and (max-width: 1080px) {
-   #welcome-info {
-      padding-top: 160px;
-   }
-}
-@media screen and (max-width: 800px) {
-	hgroup.section-heading {
-		max-width: 80vw;
-	}
-}
 
 .buffer {
-   width: 100vw;
+   width: 100%;
    min-height: 60vh;
    background-color: #27282c;
 }
 
 #committees-info {
-   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   width: 100%;
    min-height: 100vh;
-   background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(images/background2.jpg);
-   background-size:cover;
+   background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(images/background2.jpg);
+   background-size: cover;
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center center;
@@ -64,8 +58,8 @@
 .committee-box {
    width:300px;
    height:320px;
-   background: radial-gradient(circle at top left,transparent 340px, rgba(255,255,255,.3)),
-      radial-gradient(circle at bottom right,transparent 310px, rgba(255,255,255,.3));
+   background: radial-gradient(circle at top left,transparent 350px, rgba(255,255,255,.3)),
+      radial-gradient(circle at bottom right,transparent 300px, rgba(255,255,255,.3));
    margin: 15px;
    padding: 5px;
    color: white;
