@@ -95,7 +95,7 @@ header nav a.current-link {
    }
 }
 
-.page-heading {
+.section-heading {
    & h1 {
       color: #efcc90;
       font-family: "Poppins", Tahoma, sans-serif;
