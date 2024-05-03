@@ -7,7 +7,7 @@
    width: 100%;
    min-height: 100vh;
 
-   padding-top: 125px;
+   padding: 0 20vw;
 
    color: white;
 
@@ -17,16 +17,20 @@
    background-attachment: fixed;
    background-position: center center;
 
-   & h2 {
+   hgroup {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+   }
+   h2 {
       font-family: "Poppins", Tahoma, sans-serif;
       font-weight: 900;
       font-size: 36px;
       text-align: center;
    }
-   & p {
+   p {
       font-size: 18px;
       text-align: center;
-      max-width: 60vw;
    }
 }
 
@@ -43,28 +47,27 @@
 
    width: 100%;
    min-height: 100vh;
+   padding: 0 10vw;
    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(images/background2.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center center;
 }
-.committee-redirects {
-   display:flex;
-   flex-wrap:wrap;
+#committee-redirects {
+   display: flex;
+   flex-flow: row wrap;
    justify-content: center;
-   align-items:center;
+   align-items: center;
 }
 .committee-box {
-   width:300px;
-   height:320px;
+   width: 270px;
+   aspect-ratio: 0.9; 
    background: radial-gradient(circle at top left,transparent 350px, rgba(255,255,255,.3)),
       radial-gradient(circle at bottom right,transparent 300px, rgba(255,255,255,.3));
-   margin: 15px;
-   padding: 5px;
    color: white;
    text-align:center;
-   transition: 0.3s ease-in-out;
+   transition: background-color 0.3s ease-in-out;
 }
 .committee-box:hover {
    background-color: rgba(108, 122, 137, 0.2);
@@ -74,19 +77,16 @@
    padding: 0 10px;
 }
 .icon {
-   display: block;
-   height: 50px;
-   width: 50px;
-   fill: #474544;
+   height: 115px;
+   aspect-ratio: 1;
 }
 .big-button {
    position: relative;
    padding: 10px 30px;
 
-   background: #000;
-   border: 2px solid #fff;
+   background: black;
+   border: 2px solid white;
 
-   color: white;
    font-family: "Poppins", Tahoma, sans-serif;
    font-weight: 900;
    font-size: 1.5em;
@@ -98,11 +98,11 @@
    transition: 0.5s;
 
    &::before, &::after {
-      content:'';
+      content: '';
       position: absolute;
 
-      width:10px;
-      height:4px;
+      width: 10px;
+      height: 4px;
 
       background: #27282c;
       transform: translateX(-50%) skewX(325deg);
@@ -118,7 +118,6 @@
    }
    &:hover {
       letter-spacing: 0.15em;
-      border-color: white;
       box-shadow: 0 0 10px white;
       &::before {
          width: 20px;
@@ -131,8 +130,14 @@
    }
 }
 
+@media all and (max-width: 1080px) {
+   #committee-redirects {
+      flex-flow: column nowrap;
+   }
+}
+
 @media all and (max-width: 720px) {
-   #welcome-info p {
-      max-width: 80vw;
+   #welcome-info {
+      padding: 0 10vw;
    }
 }
