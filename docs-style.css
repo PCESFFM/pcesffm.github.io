@@ -1,37 +1,45 @@
-.doc-box{
-  padding: 25px;
+.docs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(670px, 100%), 1fr));
+  gap: 30px;
+}
+
+.doc-box {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: top;
+  padding: 10px;
+
   background: #1b1229;
   border-radius: 15px;
-  height: 300px;
-  width: 95%;
 }
 
-.doc-iconbox{
-  font-size: 180px;
+.doc-iconbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+
+  padding: 10px;
+  margin-right: 20px;
+
+  font-size: 100px;
   background: #3a3242;
-  width: 250px;
-  height: 250px;
   border-radius: 15px;
-  padding: 35px;
-  float: left;
 }
 
-.doc-textbox{
-  float: left;
-  height: 250px;
-  width: 61.75%;
-  margin-left: 25px;
-}
-
-.doc-name{
-  font-size: 35px;
+.doc-textbox {
   color: #b7b4bb;
+}
+
+.doc-name {
+  font-size: 35px;
   font-family: "Poppins", Tahoma, sans-serif;
-  font-weight:900;
+  font-weight: 900;
   letter-spacing: 2px;
 }
 
-.doc-text{
+.doc-text {
   font-size: 20px;
-  color: #b7b4bb;
 }
