@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-<head>
+  <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-	<link rel="stylesheet" href="base-style.css">
-	<link rel="stylesheet" href="contact-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet" href="base-style.css">
+    <link rel="stylesheet" href="contact-style.css">
 
-	<script type="text/javascript" src="nav-links.js"></script>
+    <script type="text/javascript" src="nav-links.js"></script>
 
-	<title>Pupils' Committee Website</title>
-</head>
+    <title>Pupils' Committee Website</title>
+  </head>
 
-<body>
-<header>
-	<h1><a href="index.html">Pupils' Committee</a></h1>
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="about.html">About us</a>
-		<a href="documents.html">Documents</a>
-		<a href="newsroom.html">Newsroom</a>
-		<a href="contact.html">Contact us</a>
-	</nav>
-</header>
-<main class="container3">
-	<form onsubmit="sendEmail(); reset(); return false;">
-		<h3>Contact Us</h3>
-		<input type="text" id="name" placeholder="Your Name" required>
-		<input type="email" id="email" placeholder="Your E-mail" required>
-		<textarea id="message" rows="4" placeholder="Type your mesage"></textarea>
-		<button type="submit">Send</button>
-	</form>
+  <body>
+    <header>
+      <h1><a href="index.html">Pupils' Committee</a></h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="documents.html">Documents</a>
+        <a href="newsroom.html">Newsroom</a>
+        <a href="contact.html">Contact us</a>
+      </nav>
+    </header>
+    <main class="container3">
+      <form onsubmit="sendEmail(); reset(); return false;">
+      <h3>Contact Us</h3>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your E-mail" required>
+        <textarea id="message" rows="4" placeholder="Type your mesage"></textarea>
+        <button type="submit">Send</button>
+      </form>
 
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-	<script>
-		function sendEmail() {
-			Email.send({
-				Host : "stmp.gmail.com" ,
-				Username : "PUPILS COMMITTEE EMAIL" ,
-				Password : "PASSWORD OF PUPILS COMMITTEE EMAIL" ,
-				To : 'PUPILS COMMITTEE EMAIL AGAIN',
-				From : document.getElementById("email").value ,
-  				Subject: "New contact form" ,
-  				Body : "Name:" + document.getElementById("name").value
-  				+ "<br> Email:" + document.getElementById("email").value
-  				+ "<br> Message:" + document.getElementById("message").value
-  			}).then(
-  			message => alert("Message Sent Succesfully")
-  			);
-  		}
-  	</script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+      Email.send({
+      Host : "stmp.gmail.com" ,
+      Username : "PUPILS COMMITTEE EMAIL" ,
+      Password : "PASSWORD OF PUPILS COMMITTEE EMAIL" ,
+      To : 'PUPILS COMMITTEE EMAIL AGAIN',
+      From : document.getElementById("email").value ,
+      Subject: "New contact form" ,
+      Body : "Name:" + document.getElementById("name").value
+      + "<br> Email:" + document.getElementById("email").value
+      + "<br> Message:" + document.getElementById("message").value
+      }).then(
+      message => alert("Message Sent Succesfully")
+      );
+      }
+      </script>
 
-	<div class="credit">
-		<h3>This website was programmed by Andrea Otero Arraez</h3>
-	</div>
-</main>
-<footer>
-	<p>@Copyright 2023 Pupil's Commmittee</p>
-</footer>
-</body>
+      <div class="credit">
+        <h3>This website was programmed by Andrea Otero Arraez</h3>
+      </div>
+    </main>
+    <footer>
+      <p>@Copyright 2023 Pupil's Commmittee</p>
+    </footer>
+  </body>
 </html>
