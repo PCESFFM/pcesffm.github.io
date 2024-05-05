@@ -96,6 +96,7 @@ header {
 }
 
 .section-heading {
+  margin-bottom: 60px;
   h1 {
     color: #efcc90;
     font-family: "Poppins", Tahoma, sans-serif;
@@ -124,7 +125,7 @@ header {
   content: '';
 }
 
-@media all and (max-width: 1080px) and (min-width: 721px) {
+@media (max-width: 1080px) and (min-width: 721px) and (min-height: 401px) {
   header {
     align-items: center;
     flex-flow: column nowrap;
@@ -133,7 +134,7 @@ header {
     height: 100px;
   }
 }
-@media all and (max-width: 720px) {
+@media (max-width: 720px) or ((max-width: 1080px) and (max-height: 400px)) {
   header nav {
     display: none;
   }
