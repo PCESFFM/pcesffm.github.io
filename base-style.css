@@ -90,6 +90,13 @@ header {
       }
     }
   }
+  button {
+    display: none;
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    background: none;
+    font-size: 36px;
+  }
 }
 @keyframes title_scroll {
 100% {
@@ -138,10 +145,21 @@ main>section:first-child::before {
 }
 @media (max-width: 720px) or ((max-width: 1080px) and (max-height: 400px)) {
   header {
-    justify-content: start;
+    nav {
+      display: none;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
-  header nav {
-    display: none;
+}
+@media (max-width: 512px) {
+  header {
+    h1, button {
+      font-size: 24px;
+    }
   }
 }
 
