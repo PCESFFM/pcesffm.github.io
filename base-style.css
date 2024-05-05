@@ -113,6 +113,10 @@ header {
   }
 }
 
+main>section:first-child::before {
+  margin-top: 75px;
+  content: '';
+}
 .main {
   width: 100%;
   min-height: 100%;
@@ -123,18 +127,14 @@ header {
   justify-content: start;
   flex-flow: column nowrap;
 }
-.main::before {
-  height: 75px;
-  content: '';
-}
 
 @media (max-width: 1080px) and (min-width: 721px) and (min-height: 401px) {
   header {
     align-items: center;
     flex-flow: column nowrap;
   }
-  .main::before {
-    height: 100px;
+  main>section:first-child::before {
+    margin-top: 110px;
   }
 }
 @media (max-width: 720px) or ((max-width: 1080px) and (max-height: 400px)) {
