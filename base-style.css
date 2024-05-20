@@ -173,14 +173,16 @@ footer {
   }
 }
 @media (max-width: 720px) or ((max-width: 1080px) and (max-height: 400px)) {
+  header {
+    button {
+      display: flex;
+    }
+  }
   header:not(.hamburger-open) {
     max-height: 65px;
 
     nav {
       display: none;
-    }
-    button {
-      display: flex;
     }
   }
   header.hamburger-open {
