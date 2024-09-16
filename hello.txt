@@ -1,6 +1,0 @@
-dont change names of images, 
-when replacing an image make sure 
-it is the same format as the one u 
-replacing (.png or .jpg)
-
--andreaotero

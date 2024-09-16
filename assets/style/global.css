@@ -62,7 +62,7 @@ header {
     a {
       -webkit-text-stroke: 1px white; /*For some reason does not work when applied to h1*/
     }
-    background-image: url(images/title-scroll-effect.png);
+    background-image: url(/assets/images/title-scroll-effect.png);
     background-repeat: repeat-x;
     background-clip: text;
     animation: title-scroll 5s linear infinite;

@@ -1,8 +1,0 @@
-look at lines 57 to 60 of code
-and replace what is in all caps
-
-here is the vid i used to make it
-at the end there are is some info on how
-to encrypt password if u want
-(its just one more line of code but requires email password which i do not have)
-https://www.youtube.com/watch?v=sGQSz22U8VM
