@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <base href="/en/" />
+    <base href="/" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,22 +14,13 @@
     <link rel="stylesheet" href="/assets/style/global.css">
 
     <script type="text/javascript" src="/assets/scripts/nav-links.js"></script>
+    <script type="text/javascript" src="/components/pc-header.js"></script>
 
     <title>Pupils' Committee Website</title>
   </head>
 
   <body style="background-color: #003518">
-    <header>
-      <h1><a href="">Pupils' Committee</a></h1>
-      <button onclick="document.getElementsByTagName('header').item(0).classList.toggle('hamburger-open')"><ion-icon name="menu"></ion-icon></button>
-      <nav>
-        <a href="">Home</a>
-        <a href="about.html">About us</a>
-        <a href="documents.html">Documents</a>
-        <a href="/news/">Newsroom</a>
-        <a href="contact.html">Contact us</a>
-      </nav>
-    </header>
+    <pc-header></pc-header>
     <article class="ad5-padding-y-lg">
       <div class="ad5-container ad5-max-width-xs ad5-margin-bottom-lg">
         <div class="ad5-text-component ad5-text-center ad5-line-height-lg ad5-text-gap-md ad5-margin-bottom-md">
