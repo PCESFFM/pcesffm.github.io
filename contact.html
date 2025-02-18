@@ -30,6 +30,7 @@
           <input type="text" id="name" placeholder="Your Name" required>
           <input type="email" id="email" placeholder="Your E-mail" required>
           <textarea id="message" rows="4" placeholder="Type your mesage"></textarea>
+								<p>If you want your message to stay anonymus, leave the fields blank</p>
           <button type="submit">Send</button>
         </form>
 
@@ -39,7 +40,7 @@
         Email.send({
         Host : "stmp.gmail.com" ,
         Username : "PCESFM@gmail.com" ,
-        Password : "pc2024-2025" ,
+        Password : "PC2024-2025" ,
         To : 'PCESFM@gmail.com',
         From : document.getElementById("email").value ,
         Subject: "New contact form" ,
