@@ -28,30 +28,29 @@
             <h1>Contact Us</h1>
           </hgroup>
 								<p style="color:#7F7F7F;text-align:center">If you want your message to stay anonymous, leave the fields blank</p><br/>
-          <input type="text" id="name" placeholder="Your Name">
-          <input type="email" id="email" placeholder="Your E-mail">
-          <textarea id="message" rows="4" placeholder="Type your mesage"></textarea>
-          <button type="submit">Send</button>
-        </form>
-
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-        function sendEmail() {
-        Email.send({
-        Host : "smtp.gmail.com" ,
-        Username : "PCESFM@gmail.com" ,
-        To : 'PCESFM@gmail.com',
-        From : document.getElementById("email").value ,
-        Subject: "New Student Message" ,
-        Body : "Name:" + document.getElementById("name").value
-        + "<br> Email:" + document.getElementById("email").value
-        + "<br> Message:" + document.getElementById("message").value
-        }).then(
-        message => alert("Message Sent Succesfully")
-        );
-        }
-        </script>
-
+				<form action="https://usebasin.com/f/5c85b2753b05" method="POST" style="max-width: 400px; margin: auto; font-family: Arial, sans-serif; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 20px; background-color: #f9f9f9;">
+				<div style="margin-bottom: 15px;">
+				<label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Name</label>
+				<input type="text" id="name" name="name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
+				</div>
+				<div style="margin-bottom: 15px;">
+				<label for="year-group" style="display: block; margin-bottom: 5px; font-weight: bold;">Year Group</label>
+				<select id="year-group" name="year-group" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
+				<option value="s1">S1</option>
+				<option value="s2">S2</option>
+				<option value="s3">S3</option>
+				<option value="s4">S4</option>
+				<option value="s5">S5</option>
+				<option value="s6">S6</option>
+				<option value="s7">S7</option>
+				</select>
+				</div>
+				<div style="margin-bottom: 15px;">
+				<label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Your Message</label>
+				<textarea id="message" name="message" rows="4" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
+				</div>
+				<button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Submit</button>
+				</form>
         <div class="credit">
           <h3>This website was programmed by: Luka Zupanc Cankar, Andrea Otero Arraez, Jasper Lange, Oscar Meier and Izabela Żochowska</h3>
         </div>
