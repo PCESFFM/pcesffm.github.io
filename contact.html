@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
@@ -9,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap">
     <link rel="stylesheet" href="/assets/style/global.css">
     <link rel="stylesheet" href="/assets/style/contact.css">
 
@@ -17,47 +18,124 @@
     <script type="text/javascript" src="/components/pc-header.js"></script>
 
     <title>Pupils' Committee Website</title>
+
+    <style>
+      /* Match existing site form style */
+      form.complaint-form {
+        max-width: 500px;
+        margin: 2rem auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        font-family: 'Poppins', 'Roboto', sans-serif;
+      }
+
+      form.complaint-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #1A1A1A;
+        font-size: 1rem;
+      }
+
+      form.complaint-form input,
+      form.complaint-form select,
+      form.complaint-form textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        background-color: #fafafa;
+        color: #333;
+        font-family: inherit;
+      }
+
+      form.complaint-form input:focus,
+      form.complaint-form textarea:focus,
+      form.complaint-form select:focus {
+        outline: none;
+        border-color: #0066cc;
+        box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+      }
+
+      form.complaint-form button {
+        width: 100%;
+        background-color: #004aad;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      form.complaint-form button:hover {
+        background-color: #003a88;
+      }
+
+      .credit {
+        text-align: center;
+        color: #ffffff;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+      }
+    </style>
   </head>
 
   <body>
     <pc-header></pc-header>
+
     <main>
       <section class="royal-blue">
-        <form onsubmit="sendEmail(); reset(); return false;">
-          <hgroup class="section-heading">
-            <h1>Contact Us</h1>
-          </hgroup>
-								<p style="color:#7F7F7F;text-align:center">If you want your message to stay anonymous, leave the fields blank</p><br/>
-				<form action="https://usebasin.com/f/5c85b2753b05" method="POST" style="max-width: 400px; margin: auto; font-family: Arial, sans-serif; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 20px; background-color: #f9f9f9;">
-				<div style="margin-bottom: 15px;">
-				<label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Name</label>
-				<input type="text" id="name" name="name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
-				</div>
-				<div style="margin-bottom: 15px;">
-				<label for="year-group" style="display: block; margin-bottom: 5px; font-weight: bold;">Year Group</label>
-				<select id="year-group" name="year-group" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
-				<option value="s1">S1</option>
-				<option value="s2">S2</option>
-				<option value="s3">S3</option>
-				<option value="s4">S4</option>
-				<option value="s5">S5</option>
-				<option value="s6">S6</option>
-				<option value="s7">S7</option>
-				</select>
-				</div>
-				<div style="margin-bottom: 15px;">
-				<label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Your Message</label>
-				<textarea id="message" name="message" rows="4" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
-				</div>
-				<button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Submit</button>
-				</form>
+        <hgroup class="section-heading">
+          <h1>Contact Us</h1>
+        </hgroup>
+        <p style="color:#e0e0e0; text-align:center;">
+          If you want your message to stay anonymous, you may leave the name field blank.
+        </p>
+
+        <!-- Basin Complaint Form -->
+        <form class="complaint-form" action="https://usebasin.com/f/5c85b2753b05" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name">
+
+          <label for="year-group">Year Group</label>
+          <select id="year-group" name="year-group" required>
+            <option value="">Select your year</option>
+            <option value="S1">S1</option>
+            <option value="S2">S2</option>
+            <option value="S3">S3</option>
+            <option value="S4">S4</option>
+            <option value="S5">S5</option>
+            <option value="S6">S6</option>
+            <option value="S7">S7</option>
+          </select>
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+
+        <script>
+          document.querySelector('.complaint-form').addEventListener('submit', () => {
+            alert("Your message has been sent! If you provided an email in your message, we’ll follow up soon.");
+          });
+        </script>
+
         <div class="credit">
           <h3>This website was programmed by: Luka Zupanc Cankar, Andrea Otero Arraez, Jasper Lange, Oscar Meier and Izabela Żochowska</h3>
         </div>
       </section>
     </main>
+
     <footer>
-      <p>@Copyright 2025 Pupil's Commmittee</p>
+      <p>@Copyright 2025 Pupil's Committee</p>
     </footer>
   </body>
 </html>
