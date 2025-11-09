@@ -1,18 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <base href="/" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap">
-    <link rel="stylesheet" href="/assets/style/global.css">
-    <link rel="stylesheet" href="/assets/style/contact.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style/global.css" />
+    <link rel="stylesheet" href="/assets/style/contact.css" />
 
     <script type="text/javascript" src="/assets/scripts/nav-links.js"></script>
     <script type="text/javascript" src="/components/pc-header.js"></script>
@@ -25,17 +27,24 @@
 
     <main>
       <section class="deep-purple">
-          <hgroup class="section-heading">
-            <h1>Contact Us</h1>
-            <p>If you want your message to stay anonymous, you may leave the name field blank.</p>
-          </hgroup>
-        <form class="complaint-form" action="https://usebasin.com/f/5c85b2753b05" method="POST">
+        <hgroup class="section-heading">
+          <h1>Contact Us</h1>
+          <p>If you want your message to stay anonymous, you may leave the name field blank.</p>
+        </hgroup>
+
+        <form
+          class="complaint-form"
+          action="https://usebasin.com/f/5c85b2753b05"
+          method="POST"
+          enctype="multipart/form-data"
+        >
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name">
+          <input type="text" id="name" name="name" placeholder="Your Name" />
 
           <label for="year-group">Year Group</label>
           <select id="year-group" name="year-group" required>
             <option value="">Select your year</option>
+            <option value="Rather not say">Rather not say</option>
             <option value="S1">S1</option>
             <option value="S2">S2</option>
             <option value="S3">S3</option>
@@ -48,11 +57,18 @@
           <label for="message">Your Message</label>
           <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
 
+          <div id="form-response" style="display:none; text-align:center; margin-top:1rem; color:green;">
+             Your message has been sent successfully. Thank you!
+          </div>
+
           <button type="submit">Send</button>
         </form>
 
         <div class="credit">
-          <h3>This website was programmed by: Luka Zupanc Cankar, Andrea Otero Arraez, Jasper Lange, Oscar Meier and Izabela Żochowska</h3>
+          <h3>
+            This website was programmed by: Luka Zupanc Cankar, Andrea Otero Arraez, Jasper Lange, Oscar Meier and
+            Izabela Żochowska
+          </h3>
         </div>
       </section>
     </main>
@@ -60,5 +76,32 @@
     <footer>
       <p>@Copyright 2025 Pupil's Committee</p>
     </footer>
+
+    <script>
+      const form = document.querySelector(".complaint-form");
+      const responseMsg = document.getElementById("form-response");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+
+        try {
+          const res = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { Accept: "application/json" },
+          });
+
+          if (res.ok) {
+            form.reset();
+            responseMsg.style.display = "block";
+          } else {
+            alert("There was a problem sending your message. Please try again.");
+          }
+        } catch (err) {
+          alert("An error occurred. Please check your connection and try again.");
+        }
+      });
+    </script>
   </body>
 </html>
