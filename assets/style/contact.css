@@ -28,20 +28,21 @@ form.complaint-form textarea {
   background-color: #fafafa;
   color: #333;
   font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 form.complaint-form input:focus,
 form.complaint-form textarea:focus,
 form.complaint-form select:focus {
   outline: none;
-  border-color: #0066cc;
-  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+  border-color: #4a2fbd; /* matches deep-purple accent */
+  box-shadow: 0 0 5px rgba(74, 47, 189, 0.3);
 }
 
 form.complaint-form button {
   width: 100%;
-  background-color: #000000; /* black like the credits section */
-  color: #ffffff; /* white text */
+  background-color: #000000; /* black like credits section */
+  color: #ffffff;
   padding: 12px;
   border: 2px solid #000000;
   border-radius: 6px;
@@ -54,12 +55,15 @@ form.complaint-form button {
 form.complaint-form button:hover {
   background-color: #1a1a1a; /* slightly lighter black on hover */
   border-color: #1a1a1a;
+  transform: translateY(-2px);
 }
 
+/* Placeholder text color */
 ::placeholder {
   color: gray;
 }
 
+/* Textarea adjustments */
 textarea {
   height: 150px;
   resize: vertical;
@@ -67,9 +71,34 @@ textarea {
 }
 
 .credit {
-  padding: 10px 20px;
-  border: solid #ffffff 2px;
-
-  background-color: black;
+  margin-top: 2rem;
+  padding: 15px 20px;
+  border: 2px solid #ffffff;
+  background-color: #000000;
   text-align: center;
+  border-radius: 8px;
+  font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+.credit h3 {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  form.complaint-form {
+    padding: 1.5rem;
+  }
+
+  form.complaint-form button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .credit h3 {
+    font-size: 0.85rem;
+  }
 }
