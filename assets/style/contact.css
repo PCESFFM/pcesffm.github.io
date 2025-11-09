@@ -1,5 +1,6 @@
 form.complaint-form {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 700px; /* matches credit section width visually */
   margin: 2rem auto;
   background-color: #ffffff;
   border-radius: 12px;
@@ -7,7 +8,6 @@ form.complaint-form {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   font-family: 'Poppins', 'Roboto', sans-serif;
 }
-
 form.complaint-form label {
   display: block;
   margin-bottom: 8px;
