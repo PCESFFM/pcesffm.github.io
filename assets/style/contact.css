@@ -1,5 +1,5 @@
 form.complaint-form {
-  max-width: 500px;
+  max-width: 1000px;
   margin: 2rem auto;
   background-color: #ffffff;
   border-radius: 12px;
@@ -35,13 +35,13 @@ form.complaint-form input:focus,
 form.complaint-form textarea:focus,
 form.complaint-form select:focus {
   outline: none;
-  border-color: #4a2fbd; /* matches deep-purple accent */
+  border-color: #4a2fbd; 
   box-shadow: 0 0 5px rgba(74, 47, 189, 0.3);
 }
 
 form.complaint-form button {
   width: 100%;
-  background-color: #000000; /* black like credits section */
+  background-color: #000000; 
   color: #ffffff;
   padding: 12px;
   border: 2px solid #000000;
@@ -58,12 +58,10 @@ form.complaint-form button:hover {
   transform: translateY(-2px);
 }
 
-/* Placeholder text color */
 ::placeholder {
   color: gray;
 }
 
-/* Textarea adjustments */
 textarea {
   height: 150px;
   resize: vertical;
