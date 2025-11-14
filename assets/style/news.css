@@ -84,11 +84,10 @@
 
 .imgblog {
   width: 100%;            
-  max-width: 400px;       
-  height: auto;          
+  height: 200px;          
   object-fit: cover;      
+  border-radius: 8px;    
   display: block;
-  border-radius: 8px;     
   transition: all .2s ease-in-out;
 }
 
@@ -97,14 +96,15 @@
   box-shadow: 3px 3px 9px #000000;
 }
 
+
 @media (max-width: 600px) {
   .imgblog {
-    max-width: 100%;      
+    height: 150px;        
   }
 }
 
 @media (min-width: 1200px) {
   .imgblog {
-    max-width: 600px;    
+    height: 250px;
   }
 }
