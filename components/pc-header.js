@@ -16,7 +16,7 @@ class PCHeader extends HTMLElement {
                 <a href="about.html">About us</a>
                 <a href="documents.html">Documents</a>
                 <a href="news/">Newsroom</a>
-                <a href="contact.html">Contact us</a>
+                <a href="contact.html">Complaint Box</a>
             </nav>
         </header>
         <style>
