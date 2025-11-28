@@ -1,44 +1,44 @@
 .docs {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(670px, 100%), 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* smaller min width */
+  gap: 20px; /* tighter gap for balance */
 }
 
 .doc-box {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: top;
-  padding: 10px;
-  background: #1b1229;
+  align-items: flex-start;
+  padding: 15px 20px; /* more breathing room */
+  background: #1b1229; /* keep your color */
   border-radius: 15px;
 }
 
 .doc-iconbox {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 1 / 1;
-
-  padding: 10px;
-  margin-right: 20px;
-
-  font-size: 100px;
+  width: 70px;   /* fixed size instead of huge */
+  height: 70px;
+  margin-right: 15px;
+  font-size: 36px; /* smaller icon */
   background: #3a3242;
-  border-radius: 15px;
+  border-radius: 12px;
 }
 
 .doc-textbox {
+  flex: 1;
   color: #b7b4bb;
 }
 
 .doc-name {
-  font-size: 35px;
+  font-size: 22px; /* more proportional */
   font-family: "Poppins", Tahoma, sans-serif;
-  font-weight: 900;
-  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
 .doc-text {
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.4;
 }
