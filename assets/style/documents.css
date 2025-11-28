@@ -43,6 +43,18 @@
   margin-bottom: 10px;
 }
 
+/* Added style for the anchor inside doc-name */
+.doc-name a {
+  color: #b7b4bb; /* Use the same text color */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.2s;
+}
+
+.doc-name a:hover {
+  color: #ffffff; /* Lighter color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
 .doc-text {
   font-size: 16px;
   line-height: 1.4;
