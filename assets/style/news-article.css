@@ -8,13 +8,13 @@
   --ad5-color-accent-hsl: 342, 89%, 48%;
   --ad5-color-contrast-lower-hsl: 220, 75%, 36%;
 
-  /* spacing */
+
   --ad5-space-xs: 0.5rem;
   --ad5-space-md: 1.25rem;
   --ad5-space-lg: 2rem;
   --ad5-space-sm: 0.75rem;
 
-  /* typography */
+
   --ad5-text-md: 1.2rem;
   --ad5-text-base: 1rem;
   --ad5-text-sm: 0.833rem;
