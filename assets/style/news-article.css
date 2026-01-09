@@ -256,6 +256,7 @@ p.ad5-color-contrast-medium.ad5-text-md {
   width: calc(100% - 2 * var(--ad5-space-md));
   margin-left: auto;
   margin-right: auto;
+  background-color: #756FEB;
 }
 
 .ad5-radius-lg {
@@ -327,10 +328,4 @@ img.ad5-block.ad5-width-100\%.ad5-radius-lg {
 
 .ad5-col-6 {
   grid-column-end: span 6;
-}
-
-.ad5-text-component {
-  background-color: #756FEB;
-  padding: var(--ad5-space-md);
-  border-radius: 0.5rem;
 }
