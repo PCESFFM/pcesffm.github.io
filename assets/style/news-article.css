@@ -1,4 +1,5 @@
 :root {
+  /* colors */
   --ad5-color-primary-hsl: 250, 84%, 54%;
   --ad5-color-bg-hsl: 0, 0%, 100%;
   --ad5-color-contrast-high-hsl: 230, 7%, 23%;
@@ -7,10 +8,12 @@
   --ad5-color-accent-hsl: 342, 89%, 48%;
   --ad5-color-contrast-lower-hsl: 220, 75%, 36%;
 
+
   --ad5-space-xs: 0.5rem;
   --ad5-space-md: 1.25rem;
   --ad5-space-lg: 2rem;
   --ad5-space-sm: 0.75rem;
+
 
   --ad5-text-md: 1.2rem;
   --ad5-text-base: 1rem;
@@ -20,11 +23,13 @@
 
 @media (min-width: 64rem) {
   :root {
+    /* spacing */
     --ad5-space-xs: 0.75rem;
     --ad5-space-md: 2rem;
     --ad5-space-lg: 3.125rem;
     --ad5-space-sm: 1.125rem;
 
+    /* typography */
     --ad5-text-md: 1.5625rem;
     --ad5-text-base: 1.25rem;
     --ad5-text-sm: 1rem;
@@ -32,6 +37,9 @@
   }
 }
 
+/* component */
+
+/* utility classes */
 :where(.ad5-media-wrapper-16\:9) {
   position: relative;
   height: 0;
@@ -197,12 +205,10 @@
   border-left: 4px solid hsl(var(--ad5-color-contrast-lower-hsl));
   font-style: italic;
 }
-
 p.ad5-color-contrast-medium.ad5-text-md {
   text-align: center;
   font-size: 1.2rem;
 }
-
 .ad5-text-component hr {
   margin: calc(var(--ad5-space-md) * var(--ad5-space-multiplier, 1)) auto;
   background: hsl(var(--ad5-color-contrast-lower-hsl));
@@ -256,7 +262,6 @@ p.ad5-color-contrast-medium.ad5-text-md {
   width: calc(100% - 2 * var(--ad5-space-md));
   margin-left: auto;
   margin-right: auto;
-  background-color: #756FEB;
 }
 
 .ad5-radius-lg {
@@ -279,11 +284,9 @@ p.ad5-color-contrast-medium.ad5-text-md {
   max-width: 80rem;
   aspect-ratio: 16/9;
 }
-
 img.ad5-block.ad5-width-100\%.ad5-radius-lg {
   object-fit: cover;
 }
-
 .ad5-color-contrast-medium {
   --ad5-color-o: 1;
   color: hsla(var(--ad5-color-contrast-medium-hsl), var(--ad5-color-o, 1));
