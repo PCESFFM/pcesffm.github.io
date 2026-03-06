@@ -186,3 +186,66 @@
 .ad5-newest-button:hover {
   opacity: 0.85;
 }
+/* --- Filter Dropdown Style --- */
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filter-label {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  width: 200px;
+}
+
+#categoryFilter {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 2px solid #efcc90;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#categoryFilter:hover {
+  background-color: #efcc90;
+  color: #000;
+}
+
+#categoryFilter:focus {
+  outline: none;
+}
+
+.custom-select-wrapper::after {
+  content: '▼';
+  font-size: 10px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #efcc90;
+  pointer-events: none;
+}
+
+#categoryFilter option {
+  background-color: #1a1a1a;
+  color: white;
+}
