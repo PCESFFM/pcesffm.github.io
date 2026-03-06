@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="/assets/style/global.css">
     <link rel="stylesheet" href="/assets/style/news.css">
 
@@ -27,14 +27,25 @@
           <h1> Newsroom</h1>
           <p>Stay informed with the newsroom</p>
         </hgroup>
-        <div class="blogs">
-          <div class="blog">
+
+        <!-- Dropdown Filter -->
+        <div style="margin: 0 auto 30px auto; max-width: 1200px; padding: 0 20px;">
+          <select id="categoryFilter" onchange="filterArticles()" style="padding: 10px; border-radius: 5px; font-family: 'Poppins', sans-serif; cursor: pointer;">
+            <option value="all">All Articles</option>
+            <option value="tournaments">Tournaments</option>
+            <option value="events">Events</option>
+          </select>
+        </div>
+
+        <div class="blogs" id="blogContainer">
+          <!-- Category: Events -->
+          <div class="blog" data-category="events">
             <div class="blog-top">
               <img class="imgblog" src="/assets/images/Pyjama-day.jpeg" alt="Pyjama day">
               <span class="blog-category">Announcement</span>
             </div>
             <div class="blog-about">
-              <span> Febuary 27, 2027</span>
+              <span> February 27, 2027</span>
             </div>
             <a href="news/blog/game-room.html">
               <h4>Pyjama Day</h4>
@@ -44,7 +55,9 @@
             </p>
             <a href="news/blog/5entry.html" class="read-more">Read more</a>
           </div>
-          <div class="blog">
+
+          <!-- Category: Events -->
+          <div class="blog" data-category="events">
             <div class="blog-top">
               <img class="imgblog" src="/assets/images/Wellbeing.jpeg" alt="Wellbeing">
               <span class="blog-category">Social Justice</span>
@@ -59,7 +72,9 @@
               We aim to raise awareness of the significant issue affecting South Africa. Gender-based violence (GBV) and femicide have reached devastating levels and it CANNOT be ignored.
             </p>
           </div>
-          <div class="blog">
+
+          <!-- Category: Tournaments -->
+          <div class="blog" data-category="tournaments">
             <div class="blog-top">
               <img class="imgblog" src="/assets/images/Clash_Royale_Winner.jpeg" alt="Competition Winner">
               <span class="blog-category">Winner</span>
@@ -74,7 +89,9 @@
               Congratulations to Emilio Carrasco Bauman (S4 DEB) for winning the Clash Royale tournament. What an outstanding performance he delivered.
             </p>
           </div>
-          <div class="blog">
+
+          <!-- Category: Events -->
+          <div class="blog" data-category="events">
             <div class="blog-top">
               <img class="imgblog" src="/assets/images/Game_Room.jpeg" alt="Game Room">
               <span class="blog-category">Announcement</span>
@@ -90,9 +107,11 @@
             </p>
             <a href="news/blog/4entry.html" class="read-more">Read more</a>
           </div>
-          <div class="blog">
+
+          <!-- Category: Tournaments -->
+          <div class="blog" data-category="tournaments">
             <div class="blog-top">
-              <img class="imgblog"src="/assets/images/Clash-tournament.jpeg">
+              <img class="imgblog" src="/assets/images/Clash-tournament.jpeg">
               <span class="blog-category">Competition</span>
             </div>
             <div class="blog-about">
@@ -104,9 +123,11 @@
             <p class="blog-text">Our upcoming Clash Royale tournament!</p>
             <a href="news/blog/3entry.html" class="read-more">Read more</a>
           </div>
-          <div class="blog">
+
+          <!-- Category: Tournaments -->
+          <div class="blog" data-category="tournaments">
             <div class="blog-top">
-              <img class="imgblog"src="/assets/images/drawing comp.jpeg">
+              <img class="imgblog" src="/assets/images/drawing comp.jpeg">
               <span class="blog-category">Winner</span>
             </div>
             <div class="blog-about">
@@ -118,9 +139,11 @@
             <p class="blog-text">Here is the winner of the S1-S3 drawing competition!</p>
             <a href="news/blog/2entry.html" class="read-more">Read more</a>
           </div>
-          <div class="blog">
+
+          <!-- Category: Tournaments -->
+          <div class="blog" data-category="tournaments">
             <div class="blog-top">
-              <img class="imgblog"src="/assets/images/fortnite.png">
+              <img class="imgblog" src="/assets/images/fortnite.png">
               <span class="blog-category">Winners</span>
             </div>
             <div class="blog-about">
@@ -135,8 +158,27 @@
        </div>
       </section>
     </main>
+
     <footer>
       <p>@Copyright 2026 Pupil's Commmittee</p>
     </footer>
+
+    <!-- Filter Script -->
+    <script>
+      function filterArticles() {
+        const filterValue = document.getElementById('categoryFilter').value;
+        const articles = document.querySelectorAll('.blog');
+
+        articles.forEach(article => {
+          if (filterValue === 'all') {
+            article.style.display = 'block';
+          } else if (article.getAttribute('data-category') === filterValue) {
+            article.style.display = 'block';
+          } else {
+            article.style.display = 'none';
+          }
+        });
+      }
+    </script>
   </body>
 </html>
