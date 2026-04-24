@@ -43,34 +43,44 @@
       <div class="buffer"></div>
 
       <section id="committees-info">
-        <hgroup class="section-heading">
-          <h1>Committees</h1>
-          <p>
-            The Pupil's committee is divided into 3 Main committees
-          </p>
-        </hgroup>
-        <div id="committee-redirects">
-          <div class="committee-box">
-            <img src="/assets/images/leaf.png">
-            <h2 style="font-weight:900;">Green committee</h2>
-            <p>The Green committee represents our schools sustainability by managing the school garden,organizing clean ups,watering the study room plants etc...
-            </p>
-          </div>
-          <div class="committee-box">
-            <img src="/assets/images/party.png">
-            <h2>Events committee</h2>
-            <p>The Event committee organizes most school events such as parties ,summerfests etc...
-            </p>
-          </div>
-          <div class="committee-box">
-            <img src="/assets/images/media.png">
-            <h2>Media committee</h2>
-            <p>The Media committee is in charge of our schools social media presence like on tiktok or instagram keeping us upto date on all events and more.
-            </p>
-          </div>
-        </div>
-        <button class="btn-1" type="button" onclick="location.href='about.html'">Meet the team</button>
-      </section>
+  <hgroup class="section-heading">
+    <h1>Committees</h1>
+    <p>
+      The Pupils' Committee is divided into 3 Main committees
+    </p>
+  </hgroup>
+
+  <div id="committee-carousel-wrapper">
+    <button class="carousel-arrow left" id="arrow-left" aria-label="Previous committee">&#8592;</button>
+    <button class="carousel-arrow right" id="arrow-right" aria-label="Next committee">&#8594;</button>
+
+    <div id="committee-redirects">
+      <div class="committee-box">
+        <img src="/assets/images/leaf.png">
+        <h2 style="font-weight:900;">Green Committee</h2>
+        <p>The Green Committee leads our school's sustainability efforts — tending the school garden, organising clean-up days, watering study room plants, and championing eco-friendly initiatives that keep our campus clean and green.</p>
+      </div>
+      <div class="committee-box">
+        <img src="/assets/images/party.png">
+        <h2 style="font-weight:900;">Events Committee</h2>
+        <p>The Events Committee brings school life to life! They plan and run everything from end-of-year parties and summer festivals to charity drives and community gatherings — making sure there's always something to look forward to.</p>
+      </div>
+      <div class="committee-box">
+        <img src="/assets/images/media.png">
+        <h2 style="font-weight:900;">Media Committee</h2>
+        <p>The Media Committee manages our school's online presence. From Instagram posts to TikTok videos, they keep the student body informed and engaged — documenting events, sharing news, and giving our school a voice on social media.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="carousel-dots">
+    <button class="carousel-dot active" data-index="0" aria-label="Card 1"></button>
+    <button class="carousel-dot" data-index="1" aria-label="Card 2"></button>
+    <button class="carousel-dot" data-index="2" aria-label="Card 3"></button>
+  </div>
+
+  <button class="btn-1" type="button" onclick="location.href='about.html'">Meet the team</button>
+</section>
     </main>
     <footer>
       <p>@Copyright 2026 Pupil's Committee</p>
