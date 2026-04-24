@@ -85,5 +85,49 @@
     <footer>
       <p>@Copyright 2026 Pupil's Committee</p>
     </footer>
+    <script>
+  const track  = document.getElementById('committee-redirects');
+  const cards  = track.querySelectorAll('.committee-box');
+  const dots   = document.querySelectorAll('.carousel-dot');
+  const arrowL = document.getElementById('arrow-left');
+  const arrowR = document.getElementById('arrow-right');
+
+  function cardStep() {
+    return cards[0].offsetWidth + parseInt(getComputedStyle(track).gap || 20);
+  }
+  function currentIndex() {
+    return Math.round(track.scrollLeft / cardStep());
+  }
+  function scrollToCard(index) {
+    index = Math.max(0, Math.min(cards.length - 1, index));
+    track.scrollTo({ left: index * cardStep(), behavior: 'smooth' });
+  }
+  function updateDots() {
+    const i = currentIndex();
+    dots.forEach((d, j) => d.classList.toggle('active', j === i));
+  }
+
+  arrowL.addEventListener('click', () => scrollToCard(currentIndex() - 1));
+  arrowR.addEventListener('click', () => scrollToCard(currentIndex() + 1));
+  dots.forEach(d => d.addEventListener('click', () => scrollToCard(+d.dataset.index)));
+  track.addEventListener('scroll', updateDots, { passive: true });
+
+  let isDown = false, startX, scrollLeft;
+  track.addEventListener('mousedown', e => {
+    isDown = true;
+    track.classList.add('grabbing');
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+  });
+  document.addEventListener('mouseup', () => {
+    isDown = false;
+    track.classList.remove('grabbing');
+  });
+  track.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    track.scrollLeft = scrollLeft - (e.pageX - track.offsetLeft - startX);
+  });
+</script>
   </body>
 </html>
