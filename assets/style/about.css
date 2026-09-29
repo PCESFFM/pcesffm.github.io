@@ -25,6 +25,7 @@
     aspect-ratio: 1;
     border-radius: 15px;
     margin-bottom: 15px;
+    object-fit: cover;
   }
 
   ion-icon {
