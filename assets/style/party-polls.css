@@ -1,0 +1,113 @@
+.polls-section {
+  padding: 2rem 1rem;
+}
+
+.poll-card {
+  max-width: 650px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  color: #222;
+  border-radius: 15px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  font-family: "Poppins", sans-serif;
+}
+
+.poll-badge {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 20px;
+  background: #eee8ff;
+  color: #4b3290;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.poll-card h2 {
+  margin: 1rem 0 0.5rem;
+}
+
+.poll-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+.poll-card fieldset {
+  border: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.poll-card legend {
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.poll-option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.poll-option:hover {
+  background: #f7f4ff;
+  border-color: #9b85df;
+}
+
+.poll-option:has(input:checked) {
+  background: #f0ebff;
+  border-color: #6044b5;
+}
+
+.poll-option input {
+  width: 18px;
+  height: 18px;
+  accent-color: #6044b5;
+  flex-shrink: 0;
+}
+
+.poll-vote-button {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #4b3290;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.poll-vote-button:hover {
+  background: #35216d;
+}
+
+.poll-vote-button:focus-visible,
+.poll-option:focus-within {
+  outline: 2px solid #6044b5;
+  outline-offset: 3px;
+}
+
+#poll-message {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .poll-card {
+    padding: 1.25rem;
+  }
+
+  .poll-card h2 {
+    font-size: 1.3rem;
+  }
+}
