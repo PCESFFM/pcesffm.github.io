@@ -80,6 +80,83 @@
           </h3>
         </div>
       </section>
+
+      <!-- PARTY POLLS -->
+
+      <section class="deep-purple polls-section">
+        <hgroup class="section-heading">
+          <h1>Party Polls</h1>
+          <p>
+            Help us plan our next school party! Choose your favourite theme.
+          </p>
+        </hgroup>
+        
+        <div class="poll-card">
+          <span class="poll-badge">VOTING OPEN</span>
+          
+          <h2 id="poll-title">
+            What should our next party theme be?
+          </h2>
+          
+          <p class="poll-description">
+            Pick the theme you'd most like to see at our next school party.
+          </p>
+
+          <form id="party-poll-form">
+            <fieldset>
+              <legend>Choose one option</legend>
+
+              <label class="poll-option">
+
+                <input
+                  type="radio"
+                  name="party-theme"
+                  value="Hollywood"
+                  required
+                />
+
+                <span>Hollywood</span>
+              </label>
+
+              <label class="poll-option">
+                <input
+                  type="radio"
+                  name="party-theme"
+                  value="Masquerade Ball"
+                />
+
+                <span>Masquerade Ball</span>
+              </label>
+
+              <label class="poll-option">
+                <input
+                  type="radio"
+                  name="party-theme"
+                  value="Y2K"
+                />
+
+                <span>Y2K</span>
+              </label>
+
+              <label class="poll-option">
+                <input
+                  type="radio"
+                  name="party-theme"
+                  value="Enchanted Forest"
+                />
+
+                <span>Enchanted Forest</span>
+              </label>
+
+              <button type="submit" class="poll-vote-button">
+                Vote
+              </button>
+            </fieldset>
+          </form>
+
+          <p id="poll-message" role="status" aria-live="polite"></p>
+        </div>
+      </section>
     </main>
 
     <footer>
