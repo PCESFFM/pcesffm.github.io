@@ -1,7 +1,8 @@
+
 const pollForm = document.getElementById("party-poll-form");
 const pollMessage = document.getElementById("poll-message");
 
-pollForm.addEventListener("submit", function (event) {
+pollForm.addEventListener("submit", async function (event) {
   event.preventDefault();
 
   const selectedOption = pollForm.querySelector(
@@ -13,12 +14,41 @@ pollForm.addEventListener("submit", function (event) {
     return;
   }
 
-  pollMessage.textContent =
-    `Thanks for voting! You selected: ${selectedOption.value}.`;
+  const voteButton = pollForm.querySelector("button[type='submit']");
 
-  pollForm.querySelectorAll('input[name="party-theme"]').forEach((input) => {
-    input.disabled = true;
-  });
+  voteButton.disabled = true;
+  pollMessage.textContent = "Submitting your vote...";
 
-  pollForm.querySelector("button[type='submit']").disabled = true;
+  const data = new FormData(pollForm);
+
+  try {
+    const response = await fetch(pollForm.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    if (response.ok) {
+      pollMessage.textContent =
+        `Thanks for voting! You selected: ${selectedOption.value}.`;
+
+      pollForm.querySelectorAll(
+        'input[name="party-theme"]'
+      ).forEach((input) => {
+        input.disabled = true;
+      });
+
+    } else {
+      throw new Error("Submission failed");
+    }
+
+  } catch (error) {
+    pollMessage.textContent =
+      "There was a problem submitting your vote. Please try again.";
+
+    voteButton.disabled = false;
+  }
 });
+
