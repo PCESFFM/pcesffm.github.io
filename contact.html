@@ -30,7 +30,8 @@
       <section class="deep-purple">
         <hgroup class="section-heading">
           <h1>Complaint Box</h1>
-          <p>If you want your message to stay anonymous, you may leave the name field blank. 
+          <p>
+            If you want your message to stay anonymous, you may leave the name field blank.
             Please note that any foul or inappropriate language will be automatically filtered out.
           </p>
         </hgroup>
@@ -41,6 +42,8 @@
           method="POST"
           enctype="multipart/form-data"
         >
+          <input type="hidden" name="form_type" value="Complaint Box">
+
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your Name" />
 
@@ -56,24 +59,30 @@
             <option value="S6">S6</option>
             <option value="S7">S7</option>
           </select>
+
           <label for="frequency">How often does this happen?</label>
-          <input 
-            type="text" 
-            id="frequency" 
-            name="frequency" 
+          <input
+            type="text"
+            id="frequency"
+            name="frequency"
             placeholder="e.g. 3 times a month, every day"
           />
+
           <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Type your message here..."
+            required
+          ></textarea>
 
           <div id="form-response" style="display:none; text-align:center; margin-top:1rem; color:green;">
-             Your message has been sent successfully. Thank you!
+            Your message has been sent successfully. Thank you!
           </div>
 
           <button type="submit">Send</button>
         </form>
-
-        
       </section>
 
       <!-- PARTY POLLS -->
@@ -85,31 +94,35 @@
             Help us plan our next school party! Choose your favourite theme.
           </p>
         </hgroup>
-        
+
         <div class="poll-card">
           <span class="poll-badge">VOTING OPEN</span>
-          
+
           <h2 id="poll-title">
             What should our next party theme be?
           </h2>
-          
+
           <p class="poll-description">
             Pick the theme you'd most like to see at our next school party.
           </p>
 
-          <form id="party-poll-form">
+          <form
+            id="party-poll-form"
+            action="https://usebasin.com/f/5c85b2753b05"
+            method="POST"
+          >
+            <input type="hidden" name="form_type" value="Party Poll">
+
             <fieldset>
               <legend>Choose one option</legend>
 
               <label class="poll-option">
-
                 <input
                   type="radio"
                   name="party-theme"
                   value="Hollywood"
                   required
                 />
-
                 <span>Hollywood</span>
               </label>
 
@@ -119,7 +132,6 @@
                   name="party-theme"
                   value="Masquerade Ball"
                 />
-
                 <span>Masquerade Ball</span>
               </label>
 
@@ -129,7 +141,6 @@
                   name="party-theme"
                   value="Y2K"
                 />
-
                 <span>Y2K</span>
               </label>
 
@@ -139,7 +150,6 @@
                   name="party-theme"
                   value="Enchanted Forest"
                 />
-
                 <span>Enchanted Forest</span>
               </label>
 
@@ -152,17 +162,20 @@
           <p id="poll-message" role="status" aria-live="polite"></p>
         </div>
       </section>
+
       <div class="credit">
-          <h3>
-            This website was programmed by: Luka Zupanc Cankar, Andrea Otero Arraez, Jasper Lange, Oscar Meier,
-            Izabela Żochowska, Kiara Abam and Sara Ho Caetano 
-          </h3>
-        </div>
+        <h3>
+          This website was programmed by: Luka Zupanc Cankar, Andrea Otero Arraez, Jasper Lange, Oscar Meier,
+          Izabela Żochowska, Kiara Abam and Sara Ho Caetano
+        </h3>
+      </div>
     </main>
 
     <footer>
       <p>@Copyright 2026 Pupil's Committee</p>
     </footer>
+
+    <!-- COMPLAINT BOX SUBMISSION -->
 
     <script>
       const form = document.querySelector(".complaint-form");
@@ -170,7 +183,11 @@
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
+
         const data = new FormData(form);
+        const submitButton = form.querySelector("button[type='submit']");
+
+        submitButton.disabled = true;
 
         try {
           const res = await fetch(form.action, {
@@ -187,10 +204,15 @@
           }
         } catch (err) {
           alert("An error occurred. Please check your connection and try again.");
+        } finally {
+          submitButton.disabled = false;
         }
       });
     </script>
+
     <link rel="stylesheet" href="/assets/style/party-polls.css" />
-     <script src="/components/party-polls.js"></script>
+    <script src="/components/party-polls.js"></script>
+
   </body>
 </html>
+
