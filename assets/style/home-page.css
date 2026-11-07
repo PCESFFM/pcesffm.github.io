@@ -1,7 +1,7 @@
 #welcome-info {
   justify-content: center;
 
-  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/assets/images/background.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/assets/images/background3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
